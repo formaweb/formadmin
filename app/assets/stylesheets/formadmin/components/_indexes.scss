@@ -1,0 +1,67 @@
+// Selection Toggler
+.resource_selection_toggle_panel {
+  margin-bottom: 20px;
+  @include clearfix;
+
+  .resource_selection_toggle_cell {
+    float: left;
+    margin: 3px 5px 0 0;
+  }
+}
+
+// Blog
+.index_as_blog {
+  .resource_selection_toggle_cell {
+    margin-left: 15px;
+  }
+
+  .banner {
+    @extend %box;
+    overflow: hidden;
+    position: relative;
+
+    .resource_selection_cell {
+      left: 15px;
+      position: absolute;
+      top: 15px;
+    }
+
+    h3 {
+      @extend %header;
+      margin: 0;
+      padding-left: 45px;
+    }
+
+    .content {
+      padding: 15px;
+    }
+
+    .meta {
+      border-top: 1px solid $silver;
+      color: rgba($text-color, 0.5);
+      font-size: 14px;
+      margin-top: 15px;
+      padding-top: 15px;
+    }
+
+    + .banner {
+      margin-top: 20px;
+    }
+  }
+}
+
+// Grid
+.index_as_grid {
+  .banner {
+    transition: transform 250ms;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    img {
+      border-radius: $radius;
+      display: block;
+    }
+  }
+}

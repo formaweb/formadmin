@@ -1,0 +1,30 @@
+#active_admin_content {
+  padding: 30px 30px 0;
+  flex: 1;
+
+  @include clearfix;
+
+  #main_content_wrapper {
+    float: left;
+    width: 100%;
+  }
+
+  // Sidebar Stuffs
+  &.with_sidebar #main_content {
+    margin-right: 300px;
+  }
+
+  #sidebar {
+    float: left;
+    margin-left: -270px;
+    width: 270px;
+
+    .panel_contents {
+      padding: 0;
+
+      > div {
+        padding: 15px;
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+form {
+
+  // Resets
+  ul,
+  ol,
+  li,
+  fieldset,
+  legend,
+  input,
+  select,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  ol,
+  li {
+    list-style: none;
+  }
+
+  fieldset {
+    border: 0;
+    margin-bottom: 20px;
+    position: relative;
+
+    &.inputs {
+      @extend %box;
+    }
+
+    &.actions {
+      margin: 0;
+
+      ol {
+        margin: 0;
+        text-align: center;
+      }
+
+      li {
+        display: inline-block;
+        border-top: none;
+        margin-right: 15px;
+        padding: 0;
+      }
+    }
+  }
+
+  legend {
+    display: block;
+    left: -1px;
+    position: relative;
+
+    &,
+    span {
+      width: calc(100% + 2px);
+    }
+
+    span {
+      @extend %header;
+      border: 1px solid $silver;
+      border-radius: $radius $radius 0 0;
+      font-weight: bold;
+      display: block;
+    }
+  }
+
+  ol {
+    margin: 10px 0;
+  }
+
+  ol > li {
+    border-bottom: 1px solid rgba($silver, 0.25);
+    padding: 10px 15px;
+    @include clearfix;
+
+    label {
+      color: tint($text-color, 15%);
+      float: left;
+      font-weight: bold;
+      width: 20%;
+
+      abbr[title] {
+        border: none;
+        color: $negative-color;
+        opacity: 0.5;
+        padding-left: 2px;
+        text-decoration: none;
+      }
+    }
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  // Line
+  hr {
+    background-color: rgba($silver, 0.25);
+    background-image: linear-gradient(to right, transparent, transparentize($primary-color, 0.5), transparent);
+    border: 0;
+    clear: both;
+    float: left;
+    height: 1px;
+    margin: 10px 0 -11px;
+    width: 100%;
+  }
+
+  // Fields
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='number'],
+  input[type='url'],
+  input[type='tel'],
+  input[type='date'],
+  textarea {
+    @extend %input;
+    float: right;
+    width: calc(80% - 20px);
+  }
+
+  textarea {
+    height: 100px;
+    max-height: 200px;
+    min-height: 75px;
+    resize: vertical;
+    vertical-align: top;
+  }
+
+  input[type='checkbox'] {
+    appearance: none;
+    background-color: shade($white, 5%);
+    border: 1px solid $silver;
+    border-radius: $radius;
+    cursor: pointer;
+    height: 20px;
+    outline: none;
+    position: relative;
+    transition: border 250ms 150ms, padding 250ms;
+    width: 37px;
+    vertical-align: top;
+
+    &:after {
+      background-color: shade($white, 2.5%);
+      background-image: linear-gradient(to bottom, $white, shade($white, 5%));
+      border: 1px solid shade($silver, 15%);
+      box-shadow: 0 0 5px rgba($black, 0.05);
+      border-radius: $radius;
+      content: '';
+      cursor: pointer;
+      display: block;
+      height: 20px;
+      left: -1px;
+      position: absolute;
+      right: 16px;
+      top: -1px;
+      transition: border 250ms 150ms, left 250ms 100ms, right 150ms 175ms;
+    }
+
+    &:checked {
+      border-color: $positive-color;
+      box-shadow: inset 0 0 0 13px $positive-color;
+      padding-left: 18px;
+      transition: border 250ms, box-shadow 250ms, padding 250ms 150ms;
+
+      &:after {
+        border-color: $positive-color;
+        left: 16px;
+        right: -1px;
+        transition: border 250ms, left 150ms 250ms, right 250ms 175ms;
+      }
+    }
+  }
+
+  input[type='file'],
+  select {
+    margin-left: 20px;
+  }
+
+  .date_select,
+  .time_select,
+  .datetime_select {
+    fieldset {
+      margin: 0;
+
+      ol {
+        margin: 0 0 0 calc(20% + 20px);
+      }
+
+      ol > li {
+        border-top: none;
+        float: left;
+        margin-right: 5px;
+        padding: 0;
+        width: auto;
+
+        label {
+          display: none;
+        }
+
+        select {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  // Utils
+  .inline-hints,
+  .inline-errors {
+    clear: both;
+    font-size: 14px;
+    margin: 0 0 0 calc(20% + 20px);
+    padding-top: 2px;
+  }
+
+  .inline-hints {
+    color: rgba($text-color, 0.5);
+    transition: color 250ms;
+
+    img {
+      border-radius: $radius;
+      margin-top: 10px;
+    }
+  }
+
+  .inline-errors {
+    color: $negative-color;
+  }
+
+  .boolean {
+    label {
+      font-weight: normal;
+      padding-left: calc(20% + 20px);
+      width: 100%;
+
+      input[type='checkbox'] {
+        margin: -1px 5px 0 0;
+      }
+
+      input[type='radio'] {
+        margin: 2px 5px 0 0;
+      }
+    }
+  }
+}
+
+// Sidebar
+.sidebar_section {
+  .boolean label,
+  label {
+    color: rgba($text-color, 0.75);
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    padding-left: 0;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+  }
+
+  select {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  input[type='text'],
+  input[type='password'],
+  input[type='email'],
+  input[type='url'],
+  input[type='tel'],
+  textarea {
+    font-size: 12px;
+    padding: 2px 3px;
+    width: 100%;
+  }
+}
+
+// Filter
+form.filter_form {
+  .filter_form_field {
+    padding: 10px 15px;
+    @include clearfix;
+
+    &.select_and_search {
+      select,
+      input[type='text'] {
+        width: calc(50% - 5px);
+      }
+    }
+
+    &.filter_date_range {
+      .separator,
+      input[type='text'] {
+        display: inline-block;
+        float: none;
+      }
+
+      .seperator {
+        text-align: center;
+      }
+
+      input[type='text'] {
+        background-image: asset-url('active_admin/datepicker/datepicker-input-icon.png');
+        background-position: 100% 3px;
+        background-repeat: no-repeat;
+        padding-right: 25px;
+        width: calc(50% - 9px);
+      }
+    }
+
+    + .filter_form_field {
+      border-top: 1px solid tint($silver, 35%);
+    }
+  }
+
+  .buttons {
+    border-top: 1px solid $silver;
+    text-align: center;
+    padding: 12px 15px;
+
+    a.clear_filters_btn {
+      margin-left: 5px;
+    }
+
+    input[type='submit'],
+    a.clear_filters_btn {
+      padding: 5px 10px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.panel,
+.section,
+.sidebar_section {
+  @extend %box;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+  h3 {
+    @extend %header;
+    margin: 0;
+  }
+
+  hr {
+    border: none;
+    border-bottom: 1px solid $silver;
+  }
+
+  > div {
+    padding: 15px;
+  }
+}

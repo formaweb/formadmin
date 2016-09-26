@@ -1,0 +1,28 @@
+%button {
+  background-color: shade($white, 2.5%);
+  background-image: linear-gradient(to bottom, $white, shade($white, 5%));
+  border: 1px solid $silver;
+  box-shadow: 0 0 5px rgba($black, 0.05);
+  border-radius: $radius;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background: $white;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 3px $silver;
+  }
+}
+
+%primary-button {
+  background-color: tint($primary-color, 25%);
+  background-image: linear-gradient(to bottom, tint($primary-color, 25%), $primary-color);
+  border-color: shade($primary-color, 25%);
+  color: $white;
+
+  &:hover {
+    background: shade($primary-color, 20%);
+  }
+}

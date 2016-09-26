@@ -1,0 +1,19 @@
+%input {
+  appearance: none;
+  background-color: $white;
+  border: 1px solid rgba($silver, 0.75);
+  border-radius: $radius;
+  outline: 0;
+  padding: 10px 12px;
+  transition: border-color 250ms, box-shadow 250ms;
+  width: 100%;
+
+  &:focus {
+    border-color: rgba($primary-color, 0.5);
+    box-shadow: 0 0 5px rgba($primary-color, 0.25);
+
+    ~ .inline-hints {
+      color: $text-color;
+    }
+  }
+}

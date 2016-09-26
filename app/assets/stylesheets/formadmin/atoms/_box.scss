@@ -1,0 +1,6 @@
+%box {
+  background-color: shade($white, 2.5%);
+  border: 1px solid $silver;
+  border-radius: $radius;
+  box-shadow: 0 0 5px rgba($black, 0.05);
+}

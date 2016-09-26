@@ -1,0 +1,16 @@
+table.index_grid td {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0 20px 20px 0;
+}
+
+.columns {
+  clear: both;
+  margin-bottom: 10px;
+  padding: 0;
+
+  .column {
+    float: left;
+  }
+}

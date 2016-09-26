@@ -1,0 +1,23 @@
+.footer {
+  background-color: $white;
+  border-top: 1px solid $silver;
+  box-shadow: 0 0 10px rgba($black, 0.1);
+  font-size: 12px;
+  line-height: 1;
+  margin-top: 20px;
+  padding: 20px 30px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  .development {
+    font-size: 10px;
+    margin-top: 3px;
+
+    a {
+      color: #c00;
+    }
+  }
+}

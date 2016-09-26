@@ -1,0 +1,167 @@
+table.index_table {
+  @extend %box;
+  background-color: $white;
+  border-collapse: separate;
+  width: 100%;
+
+  .centralized {
+    text-align: center;
+  }
+
+  tr:last-child {
+    td:first-child {
+      border-bottom-left-radius: $radius;
+    }
+
+    td:last-child {
+      border-bottom-right-radius: $radius;
+    }
+  }
+
+  th,
+  td {
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: middle;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  thead th {
+    @extend %header;
+    border: 1px solid $silver;
+    border-width: 0 1px 1px 0;
+    vertical-align: bottom;
+
+    &:first-child {
+      border-top-left-radius: $radius;
+    }
+
+    &:last-child {
+      border-top-right-radius: $radius;
+    }
+
+    &:only-child {
+      border-radius: $radius $radius 0 0;
+    }
+
+    &.sortable a {
+      background: asset-url('active_admin/orderable.png') 0 6px no-repeat;
+      display: block;
+      padding-left: 12px;
+    }
+
+    &.sorted-asc,
+    &.sorted-desc {
+      background-color: shade($white, 10%);
+      background-image: linear-gradient(to bottom, shade($white, 10%), shade($white, 15%));
+    }
+
+    &.sorted-asc a {
+      background-position: 0 -25px;
+    }
+
+    &.sorted-desc a {
+      background-position: 0 -55px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) td {
+        background-color: shade($white, 2.5%);
+      }
+
+      &:hover td {
+        background-color: shade($white, 5%);
+      }
+
+      &:last-child td {
+        border-bottom: none;
+      }
+
+      &.selected td {
+        background-color: tint($yellow, 90%);
+      }
+    }
+
+    td {
+      background-color: $white;
+      border: 1px solid tint($silver, 35%);
+      border-width: 0 1px 1px 0;
+      transition: background 250ms;
+    }
+  }
+
+  .member_link {
+    background-image: asset-url('active_admin/actions.png');
+    display: inline-block;
+    height: 13px;
+    margin-right: 7px;
+    opacity: 0.75;
+    position: relative;
+    text-indent: -99999px;
+    top: 5px;
+    transition: all 250ms;
+    white-space: nowrap;
+    width: 16px;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .view_link {
+    background-position: -16px 0;
+  }
+
+  .edit_link {
+    background-position: -32px 0;
+  }
+
+  .delete_link {
+    background-position: -48px 0;
+  }
+}
+
+// Resource Attributes Table
+.attributes_table {
+  overflow: hidden;
+
+  table {
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px 0;
+    text-align: left;
+  }
+
+  th {
+    width: 200px;
+  }
+
+  tr + tr {
+    th,
+    td {
+      border-top: 1px solid tint($silver, 50%);
+    }
+  }
+
+  .empty {
+    font-size: 12px;
+    opacity: 0.5;
+    text-transform: uppercase;
+  }
+}
+
+.attributes_table table {
+
+}

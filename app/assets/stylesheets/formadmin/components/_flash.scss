@@ -1,0 +1,41 @@
+.flash {
+  background-color: tint($info-color, 95%);
+  background-image: linear-gradient(to bottom, tint($info-color, 90%), tint($info-color, 85%));
+  border: 1px solid rgba($info-color, 0.5);
+  border-width: 0 0 1px;
+  box-shadow: 0 1px 3px rgba($black, 0.1);
+  color: $info-color;
+  font-size: 90%;
+  font-weight: bold;
+  padding: 15px 30px;
+  position: relative;
+  text-shadow: 0 1px 0 rgba($white, 0.8);
+  transition: border-color 250ms;
+
+  &:hover {
+    border-color: $info-color;
+  }
+
+  &.flash_notice {
+    background-color: tint($positive-color, 95%);
+    background-image: linear-gradient(to bottom, tint($positive-color, 90%), tint($positive-color, 85%));
+    border-color: rgba($positive-color, 0.5);
+    color: $positive-color;
+
+    &:hover {
+      border-color: $positive-color;
+    }
+  }
+
+  &.flash_error,
+  .flash_alert {
+    background-color: tint($negative-color, 95%);
+    background-image: linear-gradient(to bottom, tint($negative-color, 90%), tint($negative-color, 85%));
+    border-color: rgba($negative-color, 0.5);
+    color: $negative-color;
+
+    &:hover {
+      border-color: $negative-color;
+    }
+  }
+}

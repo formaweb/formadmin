@@ -1,0 +1,12 @@
+.unsupported_browser {
+  padding: 10px 30px;
+  background-color: tint($yellow, 90%);
+  background-image: linear-gradient(to bottom, tint($yellow, 90%), tint($yellow, 80%));
+  border-bottom: 3px solid $yellow;
+  margin: 50px 0 -50px;
+  text-align: center;
+
+  h1 {
+    font-weight: bold;
+  }
+}

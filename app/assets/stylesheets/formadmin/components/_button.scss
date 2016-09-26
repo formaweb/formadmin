@@ -1,0 +1,28 @@
+a.button,
+a:link.button,
+a:visited.button,
+a.clear_filters_btn,
+.cancel a,
+input[type='submit'],
+input[type='button'],
+button {
+  @extend %button;
+  display: inline-block;
+  font-size: 14px;
+  outline: 0;
+  padding: 9px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 250ms, box-shadow 250ms;
+  user-select: none;
+  vertical-align: middle;
+}
+
+input[type='submit'] {
+  @extend %primary-button;
+}
+
+a.member_link {
+  margin-right: 7px;
+  white-space: nowrap;
+}

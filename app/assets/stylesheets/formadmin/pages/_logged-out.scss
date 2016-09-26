@@ -1,0 +1,45 @@
+body.logged_out {
+  #active_admin_content {
+    @extend %box;
+    padding: 0 0 20px;
+    overflow: hidden;
+  }
+
+  #content_wrapper {
+    margin: 70px auto;
+    padding: 0;
+    width: 500px;
+  }
+
+  h2 {
+    @extend %header;
+    margin: 0;
+    padding: 15px;
+  }
+
+  fieldset {
+    border: 0;
+    margin: 0;
+  }
+
+  .inputs {
+    margin-bottom: 20px;
+  }
+
+  .actions {
+    float: left;
+    margin-left: 20px;
+  }
+
+  #login a {
+    font-size: 80%;
+    float: right;
+    margin-right: 20px;
+  }
+
+  .flash {
+    border-radius: $radius;
+    border-width: 1px;
+    margin-bottom: 20px;
+  }
+}

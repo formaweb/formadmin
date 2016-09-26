@@ -1,0 +1,7 @@
+%header {
+  background-color: shade($white, 5%);
+  background-image: linear-gradient(to bottom, shade($white, 5%), shade($white, 10%));
+  box-shadow: inset 0 1px 0 $white;
+  border-bottom: 1px solid $silver;
+  padding: 12px 15px;
+}

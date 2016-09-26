@@ -1,0 +1,42 @@
+.tabs {
+  .nav-tabs {
+    @extend %header;
+    border: 1px solid $silver;
+    border-top-left-radius: $radius;
+    border-top-right-radius: $radius;
+    padding: 6px 15px 0;
+
+    @include clearfix;
+
+    li {
+      float: left;
+      padding: 9px 16px;
+      transition: background-color 250ms;
+
+      &:not(:first-of-type):not(.ui-tabs-active) {
+        border-left: 1px solid rgba($silver, 0.5);
+      }
+
+      &.ui-tabs-active {
+        background-color: shade($white, 2.5%);
+        border: 1px solid $silver;
+        border-bottom-width: 0;
+        border-radius: $radius $radius 0 0;
+        font-weight: bold;
+        margin-bottom: -1px;
+        padding: 9px 15px;
+      }
+
+      a {
+        outline: none;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .ui-tabs-panel > fieldset.inputs {
+    border-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}

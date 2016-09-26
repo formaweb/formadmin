@@ -1,0 +1,44 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background-color: $background-color;
+  color: $text-color;
+  font: $font-weight $font-size $font-family;
+  font-smoothing: $font-smoothing;
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: $header-font-weight 1em $header-font-family;
+  line-height: $header-line-height;
+}
+
+::selection {
+  background-color: $highlight-background;
+  color: $highlight-color;
+}
+
+//
+#wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}

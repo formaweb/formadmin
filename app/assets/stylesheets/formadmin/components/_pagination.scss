@@ -1,0 +1,76 @@
+.paginated_collection {
+  margin-bottom: 20px;
+}
+
+.paginated_collection_contents {
+  @include clearfix;
+}
+
+#index_footer {
+  margin-top: 20px;
+}
+
+.pagination,
+.pagination_information,
+.pagination_per_page,
+.download_links {
+  font-size: 12px;
+}
+
+// Information
+.pagination_information {
+  color: rgba($text-color, 0.75);
+  float: right;
+
+  b {
+    color: $text-color;
+  }
+}
+
+// Per Page
+.pagination_per_page {
+  float: right;
+  margin-left: 20px;
+
+  select {
+    padding: 1px 5px;
+  }
+}
+
+// Download Links
+.download_links {
+  float: left;
+}
+
+// Pagination
+.pagination {
+  font-weight: bold;
+  margin: 0 0 -20px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  a,
+  .current {
+    background-color: shade($white, 5%);
+    background-image: linear-gradient(to bottom, $white, shade($white, 5%));
+    border: 1px solid $silver;
+    border-radius: $radius;
+    box-shadow: 1px 1px 1px rgba($black, 0.05), inset 0 1px 0 0 $white;
+    display: inline-block;
+    padding: 6px 10px 5px;
+    text-decoration: none;
+    transition: background-color 250ms;
+    margin: 0 1px;
+  }
+
+  a:not(.current):hover {
+    background: $white;
+  }
+
+  .current {
+    background: $primary-color;
+    border-color: shade($primary-color, 10%);
+    box-shadow: inset 0 1px 5px 0 rgba($black, 0.25);
+    color: $white;
+  }
+}

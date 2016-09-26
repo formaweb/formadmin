@@ -1,0 +1,94 @@
+//******************//
+//     Settings     //
+//******************//
+
+//-----------------//
+//   Breakpoints   //
+//-----------------//
+@function screen($breakpoints) {
+  $query: "only screen";
+  @each $property, $value in $breakpoints {
+    $query: "#{$query} and (#{$property}: #{$value})";
+  }
+
+  @return "#{$query}";
+}
+
+//--- Breakpoints ---//
+$phone-breakpoint:   480px;
+$tablet-breakpoint:  768px;
+
+//--- Page Width ---//
+$minimum-page-width: 320px;
+$maximum-page-width: 1080px;
+
+//--- Screens ---//
+$phone-screen:              screen((max-width: $phone-breakpoint));
+$tablet-screen:             screen((min-width: $phone-breakpoint + 1, max-width: $tablet-breakpoint));
+$desktop-screen:            screen((min-width: $tablet-breakpoint + 1));
+$phone-and-tablet-screen:   screen((max-width: $tablet-breakpoint));
+$tablet-and-desktop-screen: screen((min-width: $tablet-breakpoint));
+
+//--- Others Screens ---//
+$phone-to-tablet-screen:    screen((min-width: $phone-breakpoint + 1, max-width: $tablet-breakpoint - 1));
+$tablet-to-desktop-screen:  screen((min-width: $tablet-breakpoint + 1, max-width: $maximum-page-width - 1));
+$largest-phone-screen:      screen((max-width: $tablet-breakpoint - 1));
+$largest-tablet-screen:     screen((max-width: $maximum-page-width - 1));
+
+
+//-----------//
+//   Fonts   //
+//-----------//
+$font-smoothing: antialiased;
+
+//--- Page ---//
+$font-size:   16px;
+$font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-weight: normal;
+$line-height: 1.5;
+
+//--- Header ---//
+$header-font-family: $font-family;
+$header-font-weight: bold;
+$header-line-height: 1.3;
+
+
+//------------//
+//   Colors   //
+//------------//
+
+$blue:   #005fb2;
+$green:  #04844b;
+$red:    #a61a14;
+$yellow: #ffb75d;
+
+//--- Gray Scale ---//
+$white:  #ffffff;
+$silver: #cccccc;
+$gray:   #3f3f3f;
+$black:  #000000;
+
+//--- Emotive ---//
+$positive-color: $green;
+$negative-color: $red;
+$info-color:     $blue;
+$warning-color:  $yellow;
+
+//--- Theme ---//
+$primary-color:   #4d5256;
+$secondary-color: $silver;
+
+//--- Page ---//
+$background-color: #eeeeee;
+$text-color:       $gray;
+
+//--- Highlighting ---//
+$highlight-background: rgba($primary-color, 0.5);
+$highlight-color:      $white;
+
+
+//-------------//
+//   Borders   //
+//-------------//
+$radius:          4px;
+$circular-radius: 500rem;
