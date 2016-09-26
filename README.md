@@ -1,4 +1,4 @@
-# Formadimin
+# Formadmin
 
 Modern theme for Active Admin used by Formaweb.
 
