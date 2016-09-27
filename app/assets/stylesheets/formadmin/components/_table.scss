@@ -99,17 +99,18 @@ table.index_table {
     }
   }
 
-  .member_link {
-    background-image: asset-url('active_admin/actions.png');
+  .view_link,
+  .edit_link,
+  .delete_link {
+    background-repeat: no-repeat;
+    background-position: center;
     display: inline-block;
-    height: 13px;
-    margin-right: 7px;
+    height: 16px;
+    margin: 0 5px;
     opacity: 0.75;
     position: relative;
     text-indent: -99999px;
-    top: 5px;
-    transition: all 250ms;
-    white-space: nowrap;
+    transition: opacity 250ms;
     width: 16px;
 
     &:hover {
@@ -117,17 +118,29 @@ table.index_table {
     }
   }
 
-  .view_link {
-    background-position: -16px 0;
+  .delete_link {
+    background-image: asset-url('formadmin/trash.svg');
   }
 
   .edit_link {
-    background-position: -32px 0;
+    background-image: asset-url('formadmin/edit.svg');
   }
 
-  .delete_link {
-    background-position: -48px 0;
+  .view_link {
+    background-image: asset-url('formadmin/view.svg');
   }
+
+  // .view_link {
+  //   background-position: -16px 0;
+  // }
+  //
+  // .edit_link {
+  //   background-position: -32px 0;
+  // }
+  //
+  // .delete_link {
+  //   background-position: -48px 0;
+  // }
 }
 
 // Resource Attributes Table
