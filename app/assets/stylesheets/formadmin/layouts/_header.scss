@@ -34,21 +34,27 @@
       padding: 0;
     }
 
-    li {
-      font-size: 14px;
-      list-style: none;
-    }
-
     a {
       color: rgba($white, 0.9);
       text-decoration: none;
       transition: background 250ms, color 250ms;
     }
 
+    li {
+      font-size: 14px;
+      list-style: none;
+      position: relative;
+    }
+
     > li {
       display: inline-block;
       margin: 10px 5px 10px 0;
-      position: relative;
+
+      &.current > a,
+      &:hover > a {
+        background: tint($primary-color, 25%);
+        color: $white;
+      }
 
       > a {
         border-radius: $radius;
@@ -56,38 +62,22 @@
       }
 
       &.has_nested {
-        > a,
-        &:hover > a,
-        &.current > a {
-          background-position: calc(100% - 7px) 50%;
-          background-repeat: no-repeat;
+        > a:before {
+          border: 3px solid transparent;
+          border-bottom: 0;
+          border-top-color: rgba($white, 0.5);
         }
 
-        > a {
-          background-image: asset-url('active_admin/nested_menu_arrow.gif');
-          padding-right: 20px;
-        }
-
-        &:hover > a,
-        &.current > a {
-          background-image: asset-url('active_admin/nested_menu_arrow_dark.gif');
-        }
-
-        &:hover > a {
-          border-radius: $radius $radius 0 0;
+        &:hover > a:before,
+        &.current > a:before {
+          border-left-color: transparent;
+          border-top-color: $primary-color;
         }
       }
 
-      &:hover ul {
-        height: auto;
-        opacity: 1;
-        transform: scale(1);
-      }
-
-      &.current > a,
-      &:hover > a {
-        background: tint($primary-color, 25%);
-        color: $white;
+      .has_nested > ul {
+        right: -100%;
+        top: 0;
       }
     }
 
@@ -98,23 +88,53 @@
       max-width: calc(100% + 20px);
       min-width: 175px;
       opacity: 0;
-      overflow: hidden;
-      padding: 5px 10px;
+      padding: 5px 0;
       position: absolute;
       transform: scale(0);
       transform-origin: left top;
       transition: opacity 250ms, transform 250ms;
       width: 20%;
+      z-index: 11;
 
       a {
         display: block;
-        padding: 5px 0;
-        transition: margin 250ms;
+        padding: 5px 10px;
+        transition: all 250ms;
+      }
 
-        &:hover {
-          margin-left: 3px;
-          color: $white;
+      li:hover > a,
+      a:hover {
+        background-color: rgba($primary-color, 0.5);
+        color: $white;
+      }
+    }
+
+    .has_nested {
+      &:hover > ul {
+        height: auto;
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      > a {
+        padding-right: 23px;
+        position: relative;
+
+        &:before {
+          border: 3px solid transparent;
+          border-right: 0;
+          border-left-color: rgba($white, 0.5);
+          content: '';
+          position: absolute;
+          top: 50%;
+          transition: border-color 250ms;
+          right: 10px;
         }
+      }
+
+      &:hover > a:before,
+      &.current > a:before {
+        border-left-color: $primary-color;
       }
     }
   }

@@ -23,13 +23,13 @@
     .resource_selection_cell {
       left: 15px;
       position: absolute;
-      top: 15px;
+      top: 13px;
     }
 
     h3 {
       @extend %header;
       margin: 0;
-      padding-left: 45px;
+      padding-left: 60px;
     }
 
     .content {
