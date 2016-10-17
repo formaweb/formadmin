@@ -16,4 +16,12 @@
     display: block;
     line-height: 1.5;
   }
+
+  // Medias
+  @media #{$phone-screen} {
+    .blank_slate {
+      margin: 40px 0;
+      padding: 15px;
+    }
+  }
 }

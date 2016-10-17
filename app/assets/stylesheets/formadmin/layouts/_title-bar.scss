@@ -63,4 +63,17 @@
       opacity: 0.5;
     }
   }
+
+  // Medias
+  @media #{$phone-and-tablet-screen} {
+    #titlebar_left,
+    #titlebar_right {
+      display: block;
+      text-align: center;
+    }
+
+    #titlebar_right {
+      margin-top: 10px;
+    }
+  }
 }

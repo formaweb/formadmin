@@ -204,6 +204,10 @@ form {
     }
   }
 
+  .hidden {
+    display: none;
+  }
+
   // Utils
   .inline-hints,
   .inline-errors {
@@ -240,6 +244,42 @@ form {
       input[type='radio'] {
         margin: 2px 5px 0 0;
       }
+    }
+  }
+
+  // Medias
+  @media #{$phone-screen} {
+    ol > li label,
+    input[type='text'],
+    input[type='password'],
+    input[type='email'],
+    input[type='number'],
+    input[type='url'],
+    input[type='tel'],
+    input[type='date'],
+    textarea {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    ol > li label {
+      margin-bottom: 5px;
+    }
+
+    select,
+    input[type='file'],
+    .date_select fieldset ol,
+    .time_select fieldset ol,
+    .datetime_select fieldset ol,
+    .inline-hints,
+    .inline-errors {
+      margin-left: 0;
+      width: 100%;
+    }
+
+    .boolean label {
+      padding-left: 0;
     }
   }
 }
@@ -283,7 +323,12 @@ form.filter_form {
     &.select_and_search {
       select,
       input[type='text'] {
+        float: left;
         width: calc(50% - 5px);
+      }
+
+      input[type='text'] {
+        float: right;
       }
     }
 
