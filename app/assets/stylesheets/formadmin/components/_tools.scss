@@ -65,4 +65,27 @@
       border-left: 1px solid $silver;
     }
   }
+
+  // Media
+  @media #{$phone-screen} {
+    margin-bottom: 20px;
+    text-align: center;
+
+    .batch_actions_selector,
+    .scopes {
+      float: none;
+      margin: 0 0 20px;
+    }
+
+    .scopes,
+    .scope {
+      float: none !important;
+      width: 100% !important;
+    }
+
+    .scope + .scope {
+      border-top: 1px solid $silver;
+      border-left: 0;
+    }
+  }
 }

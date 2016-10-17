@@ -164,4 +164,38 @@
       display: inline;
     }
   }
+
+  .menu-button {
+    display: none;
+  }
+
+  // Medias
+  @media #{$largest-phone-screen} {
+    .site_title {
+      padding: 0 15px;
+    }
+
+    #tabs,
+    #utility_nav {
+      display: none;
+      left: 0;
+      position: absolute;
+      top: 50px;
+      width: 100%;
+    }
+
+    .menu-button {
+      display: block;
+      position: relative;
+      right: -23px;
+      top: 13px;
+    }
+
+    .opened-menu & {
+      #tabs,
+      #utility_nav {
+        display: block;
+      }
+    }
+  }
 }

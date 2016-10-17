@@ -31,7 +31,7 @@
   }
 
   // Medias
-  @media #{$phone-screen} {
+  @media #{$largest-phone-screen} {
     padding: 15px 15px 0;
 
     &.with_sidebar #main_content {

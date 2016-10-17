@@ -132,78 +132,37 @@ table.index_table {
 
   // Medias
   @media #{$phone-and-tablet-screen} {
-    display: block;
-    position: relative;
+    overflow: hidden;
 
+    &,
+    tr,
     th,
-    td {
-      border-radius: 0 !important;
+    td,
+    thead,
+    tbody {
       display: block;
-      min-width: auto !important;
-      max-width: auto !important;
+      text-align: left !important;
       width: 100% !important;
     }
 
-    th {
-      text-align: right !important;
-
-      & > * {
-        text-overflow: ellipsis;
-        overflow: hidden;
-      }
+    tr {
+      padding: 20px;
     }
 
+    th,
     td {
-      text-align: left !important;
-    }
+      background: transparent !important;
+      border: 0 !important;
+      border-radius: 0 !important;
+      padding: 5px 0 !important;
 
-    thead {
-      display: block;
-      float: left;
-      max-width: 40%;
-
-      tr {
-        border-right: 1px solid $silver;
-        display: block;
-      }
-
-      th {
-        border-right: 0;
-        text-align: right;
-        width: 100%;
-
-        &:last-child {
-          border: 0;
-        }
-
-        &:empty {
-          min-height: 42px;
-        }
+      &:empty {
+        display: none;
       }
     }
 
-    tbody {
-      display: block;
-      font-size: 0;
-      overflow-x: auto;
-      overflow-y: hidden;
-      position: relative;
-      width: auto;
-      white-space: nowrap;
-
-      tr {
-        display: inline-block;
-        font-size: 16px;
-        vertical-align: top;
-
-        + tr {
-          border-left: 1px solid tint($silver, 35%);
-        }
-      }
-
-      td {
-        border-right: 0;
-      }
+    tbody tr {
+      border-top: 1px solid $silver;
     }
   }
 }
@@ -244,7 +203,7 @@ table.index_table {
     th,
     td {
       display: block;
-      padding: 0;
+      padding: 0 0 5px;
       width: 100%;
     }
 

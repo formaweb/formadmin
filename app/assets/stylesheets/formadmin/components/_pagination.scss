@@ -74,3 +74,16 @@
     color: $white;
   }
 }
+
+// Medias
+@media #{$largest-phone-screen} {
+  .pagination,
+  .pagination_information,
+  .pagination_per_page,
+  .download_links {
+    display: block;
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+}

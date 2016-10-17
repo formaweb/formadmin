@@ -1,0 +1,58 @@
+.menu-button {
+  background: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  padding: 0;
+
+  i {
+    display: inline-block;
+    width: 100%;
+
+    &,
+    &:before,
+    &:after {
+      background-color: currentColor;
+      border-radius: $circular-radius;
+      height: 4px;
+      left: 0;
+      position: relative;
+      transition: all 250ms;
+      width: 20px;
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      top: -8px;
+    }
+
+    &:after {
+      bottom: -8px;
+    }
+  }
+
+
+  @at-root .opened-menu & {
+    i {
+      background-color: transparent;
+
+      &:before {
+        top: 0;
+        transform: rotateZ(45deg);
+      }
+
+      &:after {
+        bottom: 0;
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
