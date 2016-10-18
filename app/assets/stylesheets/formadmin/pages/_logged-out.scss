@@ -8,7 +8,8 @@ body.logged_out {
   #content_wrapper {
     margin: 70px auto;
     padding: 0;
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
   }
 
   h2 {
@@ -41,5 +42,17 @@ body.logged_out {
     border-radius: $radius;
     border-width: 1px;
     margin-bottom: 20px;
+  }
+
+  // Medias
+  @media #{$largest-phone-screen} {
+    #wrapper {
+      padding: 15px;
+    }
+
+    #content_wrapper {
+      margin: 0 auto;
+      max-width: 450px;
+    }
   }
 }

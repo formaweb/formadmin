@@ -9,7 +9,7 @@ module ActiveAdmin
       end
 
       def build_responsive_menu
-        button '<i></i>'.html_safe, type: 'button', class: 'menu-button'
+        button '<i></i>'.html_safe, type: 'button', class: 'menu-button', onclick: 'document.body.classList.toggle("opened-menu")'
       end
     end
   end

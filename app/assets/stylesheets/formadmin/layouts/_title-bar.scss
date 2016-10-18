@@ -66,6 +66,10 @@
 
   // Medias
   @media #{$phone-and-tablet-screen} {
+    #page_title {
+      word-break: keep-all;
+    }
+
     #titlebar_left,
     #titlebar_right {
       display: block;

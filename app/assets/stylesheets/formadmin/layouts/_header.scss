@@ -1,4 +1,4 @@
-.header {
+#header.header {
   align-items: center;
   background-color: rgba($primary-color, 0.95);
   backdrop-filter: blur(3px);
@@ -146,6 +146,7 @@
     text-align: right;
     transition: color 250ms;
     white-space: nowrap;
+    width: 100%;
 
     a {
       text-decoration: none;
@@ -157,6 +158,15 @@
 
     li {
       display: inline;
+
+      &:not(#current_user) {
+        opacity: 0.75;
+        transition: opacity 250ms;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
     }
   }
 
@@ -168,15 +178,67 @@
   @media #{$largest-phone-screen} {
     #tabs,
     #utility_nav {
-      display: none;
       left: 0;
-      position: absolute;
+      opacity: 0;
+      position: fixed;
       right: 0;
+      transform: translateY(calc(-100% - 90px));
+      transition: transform 250ms;
+    }
+
+    #utility_nav {
+      background-color: $primary-color;
+      height: 40px;
+      padding: 11px 0;
+      text-align: center;
       top: 50px;
+    }
+
+    #tabs {
+      background-color: rgba($primary-color, 0.95);
+      top: 90px;
+
+      li {
+        display: block;
+        float: none;
+        margin: 0;
+        padding: 5px 15px;
+        width: 100%;
+
+        + li {
+          border-top: 1px solid rgba($white, 0.1);
+        }
+      }
+
+      a {
+        display: block;
+      }
     }
 
     .site_title {
       padding: 0 15px;
+    }
+
+    .header-item ul {
+      background: transparent;
+      height: auto;
+      max-width: 100%;
+      opacity: 1;
+      margin-left: 5px;
+      position: static;
+      transform: scale(1);
+      width: 100%;
+
+      li {
+        border: 0 !important;
+        padding: 0 !important;
+
+        a:before {
+          display: inline;
+          content: '↳';
+          margin-right: 5px;
+        }
+      }
     }
 
     .menu-button {
@@ -190,35 +252,9 @@
       #tabs,
       #utility_nav {
         display: block;
+        opacity: 1;
+        transform: translateY(0);
       }
     }
-
-    // display: block;
-    // .site_title {
-    //   padding: 0 15px;
-    // }
-    //
-    // #tabs,
-    // #utility_nav {
-    //   display: none;
-    //   left: 0;
-    //   position: absolute;
-    //   top: 50px;
-    //   width: 100%;
-    // }
-    //
-    // .menu-button {
-    //   float: left;
-    //   margin-right: 15px;
-    //   position: relative;
-    //   top: 13px;
-    // }
-    //
-    // .opened-menu & {
-    //   #tabs,
-    //   #utility_nav {
-    //     display: block;
-    //   }
-    // }
   }
 }
