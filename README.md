@@ -35,3 +35,9 @@ Instead loading defaults...
 ```
 @import 'formadmin/formadmin';
 ```
+
+## Screenshots
+
+![login page](images/login.png)
+![index page](images/index.png)
+![new page](images/new.png)
