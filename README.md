@@ -2,6 +2,8 @@
 
 Modern and responsive theme for Active Admin used by Formaweb.
 
+![Formadmin](formadmin.png)
+
 ## Installation
 
 Please make sure that you are using Active Admin from their Github repo:
@@ -39,6 +41,6 @@ Instead loading defaults...
 @import 'formadmin/formadmin';
 ```
 
-## Screenshots
+## Video
 
-+![Formadmin](formadmin.gif)
+![Formadmin](formadmin.gif)
