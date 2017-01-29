@@ -4,17 +4,20 @@ Modern and responsive theme for Active Admin used by Formaweb.
 
 ## Installation
 
-1. Please make sure that you are using Active Admin from their Github repo:
+Please make sure that you are using Active Admin from their Github repo:
+
 ```
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 ```
 
-2. Add this gem in your `Gemfile`:
+Add this gem in your `Gemfile`:
+
 ```
 gem 'formadmin'
 ```
 
-3. So, bundle...
+So, bundle...
+
 ```
 $ bundle install
 ```
@@ -35,3 +38,7 @@ Instead loading defaults...
 ```
 @import 'formadmin/formadmin';
 ```
+
+## Screenshots
+
++![Formadmin](formadmin.gif)

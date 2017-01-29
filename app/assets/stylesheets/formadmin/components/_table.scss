@@ -1,8 +1,11 @@
+table {
+  border-collapse: separate;
+  width: 100%;
+}
+
 table.index_table {
   @extend %box;
   background-color: $white;
-  border-collapse: separate;
-  width: 100%;
 
   .centralized {
     text-align: center;
@@ -168,7 +171,8 @@ table.index_table {
 }
 
 // Resource Attributes Table
-.attributes_table {
+.attributes_table,
+.panel_contents {
   overflow: hidden;
 
   table {
