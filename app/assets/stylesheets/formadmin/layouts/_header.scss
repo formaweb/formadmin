@@ -196,6 +196,8 @@
 
     #tabs {
       background-color: rgba($primary-color, 0.95);
+      max-height: calc(100vh - 85px);
+      overflow: auto;
       top: 90px;
 
       li {
