@@ -10,7 +10,20 @@ table.index_grid td {
   margin-bottom: 10px;
   padding: 0;
 
+  img {
+    max-width: 100%;
+  }
+
   .column {
     float: left;
+  }
+}
+
+// Medias
+@media #{$largest-phone-screen} {
+  .columns .column {
+    float: none;
+    margin-right: 0 !important;
+    width: 100% !important;
   }
 }
