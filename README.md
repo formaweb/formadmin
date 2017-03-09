@@ -28,14 +28,14 @@ $ bundle install
 
 All you have to do is change your `assets/stylesheets/active_admin.scss`:
 
-Instead loading defaults...
+*Remove* the loading defaults...
 
 ```sass
 @import 'active_admin/mixins';
 @import 'active_admin/base';
 ```
 
-...load Formadmin:
+*Replace* with Formadmin:
 
 ```sass
 @import 'formadmin/formadmin';
