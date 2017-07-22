@@ -69,26 +69,26 @@ $gray:   #3f3f3f;
 $black:  #000000;
 
 //--- Emotive ---//
-$positive-color: $green;
-$negative-color: $red;
-$info-color:     $blue;
-$warning-color:  $yellow;
+$positive-color: $green !default;
+$negative-color: $red !default;
+$info-color:     $blue !default;
+$warning-color:  $yellow !default;
 
 //--- Theme ---//
-$primary-color:   #4d5256;
-$secondary-color: $silver;
+$primary-color:   #4d5256 !default;
+$secondary-color: $silver !default;
 
 //--- Page ---//
-$background-color: #eeeeee;
-$text-color:       $gray;
+$background-color: #eeeeee !default;
+$text-color:       $gray !default;
 
 //--- Highlighting ---//
-$highlight-background: rgba($primary-color, 0.5);
-$highlight-color:      $white;
+$highlight-background: rgba($primary-color, 0.5) !default;
+$highlight-color:      $white !default;
 
 
 //-------------//
 //   Borders   //
 //-------------//
-$radius:          4px;
-$circular-radius: 500rem;
+$radius:          4px !default;
+$circular-radius: 500rem !default;
