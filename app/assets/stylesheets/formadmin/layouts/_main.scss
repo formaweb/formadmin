@@ -19,7 +19,9 @@
   #sidebar {
     float: left;
     margin-left: -270px;
+    position: relative;
     width: 270px;
+    z-index: 1;
 
     .panel_contents {
       padding: 0;
