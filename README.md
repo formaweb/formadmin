@@ -41,6 +41,16 @@ All you have to do is change your `assets/stylesheets/active_admin.scss`:
 @import 'formadmin/formadmin';
 ```
 
+### Overriding colors
+You can override the default colors (as defined in `app/assets/stylesheets/formadmin/core/_settings.scss`) by setting the color variable in your `assets/stylesheets/active_admin.scss` before `formadmin` is loaded.
+
+For example, to change the primary color, use:
+
+```sass
+$primary-color: #024500;
+@import 'formadmin/formadmin';
+```
+
 ## Video
 
 ![Formadmin](formadmin.gif)
