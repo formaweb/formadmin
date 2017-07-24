@@ -81,7 +81,6 @@
       background: tint($primary-color, 25%);
       border-radius: 0 $radius $radius $radius;
       height: 0;
-      max-width: calc(100% + 20px);
       min-width: 175px;
       opacity: 0;
       padding: 5px 0;
@@ -89,7 +88,6 @@
       transform: scale(0);
       transform-origin: left top;
       transition: opacity 250ms, transform 250ms;
-      width: 20%;
       z-index: 11;
 
       a {
