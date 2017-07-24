@@ -283,6 +283,18 @@ form {
       padding-left: 0;
     }
   }
+  ul{
+    &.errors {
+      font-size: 14px;
+      border: 2px solid $red;
+      border-radius: 5px;
+      padding: 9px;
+      background: rgba($red,.5);
+      color: $white;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+  }
 }
 
 // Sidebar
