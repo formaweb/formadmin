@@ -67,7 +67,8 @@
   // Medias
   @media #{$phone-and-tablet-screen} {
     #page_title {
-      word-break: keep-all;
+      hyphens: auto;
+      word-break: break-all;
     }
 
     #titlebar_left,

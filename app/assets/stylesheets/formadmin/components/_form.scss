@@ -205,6 +205,28 @@ form {
     }
   }
 
+  .choices {
+    margin-bottom: 0;
+  }
+
+  .choices-group {
+    margin: 0 0 0 calc(20% + 20px);
+  }
+
+  .choice {
+    border: 0;
+    padding: 5px 0;
+
+    label {
+      font-weight: normal;
+      width: 100%;
+    }
+
+    input[type="checkbox"] {
+      margin: -1px 5px 0 0;
+    }
+  }
+
   .hidden {
     display: none;
   }
@@ -273,6 +295,7 @@ form {
     .date_select fieldset ol,
     .time_select fieldset ol,
     .datetime_select fieldset ol,
+    .choices-group,
     .inline-hints,
     .inline-errors {
       margin-left: 0;
