@@ -24,10 +24,19 @@
     z-index: 1;
 
     .panel_contents {
-      padding: 0;
+      padding: 15px;
 
-      > div {
-        padding: 15px;
+      > form {
+        margin: -15px;
+      }
+
+      h4 {
+        margin: 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
       }
     }
   }
