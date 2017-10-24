@@ -23,11 +23,13 @@
     width: 270px;
     z-index: 1;
 
-    .panel_contents {
-      padding: 0;
+    :not(#search-status-_sidebar_section) {
+      .panel_contents {
+        padding: 0;
 
-      > div {
-        padding: 15px;
+        > div {
+          padding: 15px;
+        }
       }
     }
   }
