@@ -56,6 +56,12 @@ $primary-color: #c0ffee;
 
 ![Formadmin](formadmin.gif)
 
+## Donating
+
+- **Bitcoin (BTC):** 1QDoa2Cr8Lbt15mSDQwQc1vRxH9HHT8AC
+- **Ethereum (ETH)**: 0x9d55a96d00B70FF9c23B05D610261E61e398f5BF
+- **Litecoin (LTC):** LVu6cTKF1VDVVFBxQPKpRUmbcshEeeWy8H
+
 ## Contributing
 
 1. Fork it ( https://github.com/formaweb/formadmin/fork )
