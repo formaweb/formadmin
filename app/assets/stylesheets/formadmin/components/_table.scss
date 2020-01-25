@@ -51,7 +51,7 @@ table.index_table {
     }
 
     &.sortable a {
-      background: asset-url('active_admin/orderable.png') 0 6px no-repeat;
+      background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAABGCAYAAAAAVo4aAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAH5JREFUeNpi3LhlOwMU1AExGxDXwARYoHQLEFdD2cxAXAliMKFJgEAFEHfBJEHGMKLhMpgkTsAEdch/NNwCk2xCdiEQtML4LEgCf6EubUX3Cgh0oNvJ+P//f7wOGpUclRwYSZb41CyidNbB8giNM+9oXhmVHHm5bJjUSAABBgDKKiwMMUxPwgAAAABJRU5ErkJggg==") 0 6px no-repeat;
       display: block;
       padding-left: 12px;
     }
